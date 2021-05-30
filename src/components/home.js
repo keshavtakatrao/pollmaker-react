@@ -58,7 +58,9 @@ function Home() {
                                 navigator.clipboard.writeText(data.shortUrl)
                               }}>Copy URL</button>
 
-                              <button className='btn btn-warning btn-sm' style={{marginLeft:"50px"}}>
+                              <button className='btn btn-warning btn-sm' style={{marginLeft:"50px"}} onClick={()=>{
+                                history.push('/result/'+data._id)
+                              }}>
                                 Result
                               </button>
 
