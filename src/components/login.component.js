@@ -19,7 +19,7 @@ export default function Login() {
             email,
             password
         }
-        await axios.post('https://pollmaker.herokuapp.com//login', data)
+        await axios.post('https://pollmaker.herokuapp.com/login', data)
             .then((response) => {
                 if (response.data.message == 'allow') {
                     window.localStorage.setItem('curr_user', data.email);
