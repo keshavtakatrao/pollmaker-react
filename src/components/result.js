@@ -3,10 +3,12 @@ import axios from 'axios'
 import MyNavbar from './navbar'
 import {useHistory} from 'react-router-dom';
 import { Doughnut } from 'react-chartjs-2';
+import {HashLoader} from 'react-spinners'
 
 const Result = (props) => {
     let history = useHistory();
     let ID = props.match.params.id;
+    let [loading,setLoading] = useState(false)
 
     let [pollData,setPollData] = useState({});
     let pollLable = [];
@@ -17,6 +19,7 @@ const Result = (props) => {
         await axios.get('https://pollmaker.herokuapp.com/poll/' + ID)
         .then((response)=>{
             setPollData(response.data)
+            setLoading(true)
             response.data.options.map((info)=>{
                 pollLable.push(info.opt);
                 pollDatasets.push(info.votes)
@@ -77,7 +80,7 @@ const Result = (props) => {
                 <div className='row'>
                     <div className='col-lg-4 offset-lg-4'>
                         <h2 style={{marginBottom:"10px"}}>{pollData.pollQuestion}</h2>
-                        <Doughnut data={data} />
+                        {loading?<Doughnut data={data}/>:<div style={{marginTop:'10em'}}><center><HashLoader size={100} loading /></center> </div>}
                     </div>
                 </div>
             </div>

@@ -13,7 +13,7 @@ const MyNavbar = () => {
     };
     return (
         <Navbar className='navbar' collapseOnSelect expand="lg" bg="dark" variant="dark" style={{paddingLeft:"50px"}}>
-                <Navbar.Brand><Link to='/'>Polls Maker</Link></Navbar.Brand>
+                <Link to='/' style={{textDecoration:"none"}}><Navbar.Brand to='/home'>Polls Maker</Navbar.Brand></Link>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="justify-content-end">

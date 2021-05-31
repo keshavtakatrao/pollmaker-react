@@ -7,6 +7,7 @@ import './component.css'
 import MyNavbar from "./navbar";
 import Mainpage from './mainpage'
 import Createpoll from './createpoll'
+import {HashLoader} from 'react-spinners'
 
 
 function Home() {
@@ -16,9 +17,14 @@ function Home() {
     history.push('/sign-in');
   }
   let [polls, setPolls] = useState([]);
+  let[loading,setLoading] = useState(false);
   useEffect(async () => {
     await axios.get('https://pollmaker.herokuapp.com/getpolls/' + id).
-      then(response => setPolls(response.data))
+      then((response) => {
+        setPolls(response.data)
+        setLoading(true)
+      })
+    
   }, [])
   console.log(window.localStorage.getItem('curr_id'))
   console.log(polls)
@@ -33,7 +39,8 @@ function Home() {
           </div>
         </div>
         <hr />
-        {polls.length == 0 ? <><center><h1>No previous polls present </h1><br />Create a new poll</center></> : <>
+        
+        {loading ? polls.length == 0 ? <><center><h1>No previous polls present </h1><br />Create a new poll</center></> : <>
           <div class="card shadow mb-4 col-10 offset-1">
             <div class="card-header py-3">
               <h6 class="m-0 font-weight-bold text-primary">Previous Polls</h6>
@@ -74,7 +81,7 @@ function Home() {
             </div>
           </div>
 
-        </>}
+        </> :<><div className='col-10 offset-1' style={{marginTop:"50px"}}><center><HashLoader loading/></center></div>  </>}
 
       </div>
     </>
