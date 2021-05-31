@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/pollmaker-react/static/css/main.02abfac4.chunk.css",
-    "main.js": "/pollmaker-react/static/js/main.1ad378e9.chunk.js",
-    "main.js.map": "/pollmaker-react/static/js/main.1ad378e9.chunk.js.map",
+    "main.js": "/pollmaker-react/static/js/main.7f719c3d.chunk.js",
+    "main.js.map": "/pollmaker-react/static/js/main.7f719c3d.chunk.js.map",
     "runtime-main.js": "/pollmaker-react/static/js/runtime-main.4e601467.js",
     "runtime-main.js.map": "/pollmaker-react/static/js/runtime-main.4e601467.js.map",
     "static/css/2.61b4cb56.chunk.css": "/pollmaker-react/static/css/2.61b4cb56.chunk.css",
@@ -18,6 +18,6 @@
     "static/css/2.61b4cb56.chunk.css",
     "static/js/2.250dab05.chunk.js",
     "static/css/main.02abfac4.chunk.css",
-    "static/js/main.1ad378e9.chunk.js"
+    "static/js/main.7f719c3d.chunk.js"
   ]
 }
