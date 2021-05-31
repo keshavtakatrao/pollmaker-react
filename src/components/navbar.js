@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
-import { useHistory } from 'react-router-dom'
+import { useHistory,Link } from 'react-router-dom'
 
 const MyNavbar = () => {
     let history = useHistory();
@@ -13,7 +13,7 @@ const MyNavbar = () => {
     };
     return (
         <Navbar className='navbar' collapseOnSelect expand="lg" bg="dark" variant="dark" style={{paddingLeft:"50px"}}>
-                <Navbar.Brand to='/home'>Polls Maker</Navbar.Brand>
+                <Navbar.Brand><Link to='/'>Polls Maker</Link></Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="justify-content-end">

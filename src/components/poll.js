@@ -48,7 +48,7 @@ const Poll = (props) => {
             let data = {
                 vote: value
             }
-            await axios.post('http://localhost:3030/submit/' + ID, data)
+            await axios.post('https://pollmaker.herokuapp.com/submit/' + ID, data)
                 .then((response) => {
                     if (response.data.message == 'vote submitted') {
                         handleShow();
