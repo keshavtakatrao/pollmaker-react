@@ -37,7 +37,7 @@ export default function Login() {
             e.preventDefault();
             handelLogin();
         }}>
-            <div className='container col-8 offset-2 col-lg-4 offset-lg-4' style={{marginTop:"5em"}}>
+            <div className='container col-10 offset-1 col-lg-4 offset-lg-4' style={{marginTop:"5em"}}>
            
             <h3>Log in</h3>
 
