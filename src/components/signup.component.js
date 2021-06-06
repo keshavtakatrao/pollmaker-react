@@ -48,8 +48,8 @@ function SignUp() {
             e.preventDefault();
             handlleSignup();
         }}>
-            <div className='inner'>
-            <h3>Register</h3>
+            <div className='container col-8 offset-2 col-lg-4 offset-lg-4' style={{marginTop:"5em"}}>
+            <h3 style={{textAlign:"center"}}>Register</h3>
             {warrning ? <div class="alert alert-danger" role="alert">
                 {warrning}
             </div> : null}

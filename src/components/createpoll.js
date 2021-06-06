@@ -76,13 +76,13 @@ const Createpoll = () => {
             </Modal>
 
             {/*Body */}
-            <div className='container col-8 offset-2 shadow-lg p-3 mb-5 bg-white rounded' style={{ marginTop: "50px"}}>
+            <div className='container col-10 offset-1 col-lg-8 offset-lg-2 shadow-lg p-3 mb-5 bg-white rounded' style={{ marginTop: "50px"}}>
                 <div className='row'>
                     <div className='col-12'>
                         <center>
                             <h1>Create Poll</h1>
                         </center>
-                        <Form className='col-8 offset-2' style={{ marginBottom: "3em" }} onSubmit={(e) => {
+                        <Form className='col-10 offset-1 col-lg-8 offset-lg-2' style={{ marginBottom: "3em" }} onSubmit={(e) => {
                             e.preventDefault();
                             handleSubmit();
                         }}>
